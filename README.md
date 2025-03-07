@@ -1,7 +1,7 @@
 # parallax_artist_website
 **Simple parallax responsive website created by Tailwind 4.0**
 
-![portfolio](https://github.com/user-attachments/assets/ff73f7b1-9195-40d4-8ce0-f13c7cfc31fd)
+![artist_website](https://github.com/user-attachments/assets/fdd7a9a0-38fd-434a-b15d-66a8e9360b33)
 - [Demo Project](https://nima-frontend.github.io/parallax_artist_website/)
 - Developed by Nima Pourdad
 - Created - 2025-3-8
