@@ -1,0 +1,129 @@
+@import url(https://db.onlinewebfonts.com/c/643121b5d2cc9943eff9b59054cc29ba?family=DIN+Next+Rounded+LT+W01+Light);
+@import url(../fonts/FuturaLT-Light.woff);
+@import "tailwindcss";
+
+@theme {
+    --color-grayFocus: #f0f0f0;
+}
+@font-face {
+    font-family: "DIN Next Rounded LT W01 Light";
+    src: url("https://db.onlinewebfonts.com/t/643121b5d2cc9943eff9b59054cc29ba.eot");
+    src: url("https://db.onlinewebfonts.com/t/643121b5d2cc9943eff9b59054cc29ba.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/643121b5d2cc9943eff9b59054cc29ba.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/643121b5d2cc9943eff9b59054cc29ba.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/643121b5d2cc9943eff9b59054cc29ba.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/643121b5d2cc9943eff9b59054cc29ba.svg#DIN Next Rounded LT W01 Light")format("svg");
+}
+@font-face {
+    font-family: "Futura_LT";
+    src: url(../fonts/FuturaLT-Light.woff)format(woff);
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+.bg-header{
+    background-image: url(../img/building.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.bg-section-1{
+    background-image: url(../img/bg-section-1.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 530px;
+}
+.bg-section-2{
+    background-image: url(../img/bg-section-2.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 530px;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+.animate-floating {
+    animation: float 3s ease-in-out infinite;
+}
+.off-screen-menu{
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    padding-left: 30px;
+    max-width: 260px;
+    position: fixed;
+    top: 0;
+    right: -260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    font-size: 3rem;
+    transition:.3s ease;
+}
+.off-screen-menu.active{
+    right: 0;
+}
+.ham-menu{
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+}
+.ham-menu span{
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: .3s ease
+}
+
+.ham-menu span:nth-child(1){
+    top: 25%;
+}
+.ham-menu span:nth-child(3){
+    top: 75%;
+}
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform:translate(-50%,50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform:translate(-50%,50%) rotate(-45deg);
+}
+.overlay{
+    width: 100%;
+    opacity: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.575);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+}
+.overlay.active{
+    opacity: 75;
+    display: block;
+}
+.hamWrapper.active{
+    position: fixed;
+    top: 1.5rem;
+    right: 1rem;
+}
